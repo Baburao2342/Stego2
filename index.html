@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stego Challenge — Find the Hacker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>Stego Challenge</h1>
+      <p class="lede">Someone left us a smug image named <strong>`getpwned.png`</strong>. He thinks it's a taunt — but he was sloppy. Use the image and your wits to answer the questions below.</p>
+    </header>
+
+    <section class="card">
+      <div class="image-area">
+        <img src="getpwned.png" alt="getpwned" class="preview">
+        <a class="btn download" href="getpwned.png" download="getpwned.png">Download image</a>
+      </div>
+
+      <form id="challengeForm" class="form">
+        <p class="hint">Enter the details you can extract from the image. Answers are case-insensitive.</p>
+
+        <label class="field">
+          <span class="label">1) What's his full name?</span>
+          <input id="name" type="text" autocomplete="off" placeholder="Full name">
+          <small class="status" id="nameStatus"></small>
+        </label>
+
+        <label class="field">
+          <span class="label">2) What's his username?</span>
+          <input id="username" type="text" autocomplete="off" placeholder="Username">
+          <small class="status" id="usernameStatus"></small>
+        </label>
+
+        <label class="field">
+          <span class="label">3) Which school did he go to?</span>
+          <input id="school" type="text" autocomplete="off" placeholder="School">
+          <small class="status" id="schoolStatus"></small>
+        </label>
+
+        <label class="field">
+          <span class="label">4) What is his email?</span>
+          <input id="email" type="email" autocomplete="off" placeholder="Email">
+          <small class="status" id="emailStatus"></small>
+        </label>
+
+        <label class="field">
+          <span class="label">5) Which game is he addicted to?</span>
+          <input id="game" type="text" autocomplete="off" placeholder="Game">
+          <small class="status" id="gameStatus"></small>
+        </label>
+
+        <div class="actions">
+          <button id="checkBtn" type="button" class="btn primary">Check answers</button>
+          <button id="resetBtn" type="button" class="btn ghost">Reset</button>
+        </div>
+
+        <p id="result" class="result"></p>
+      </form>
+    </section>
+
+    <footer class="credits">Hacker: dumb idiot. Challenge: your brain.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
